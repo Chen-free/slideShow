@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "微软雅黑";
+    color: #333333;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link,a:visited{
+    color: #5e5e5e;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src:url("img/font/iconfont.eot");
+    src:url("img/font/iconfont.eot") format('embedded-opentype'),
+    url("img/font/iconfont.woff") format('woff'),
+    url("img/font/iconfont.ttf") format('truetype'),
+    url("img/font/iconfont.svg#iconfont") format('svg');
+}
+.main{
+    width: 1200px;
+    height: 460px;
+    margin: 30px auto;
+    position: relative; /*button定位的父亲*/
+}
+
+.banner{
+    width: 1200px;
+    height: 460px;
+    overflow: hidden;
+}
+
+.banner-slide{
+    width: 1200px;
+    height: 460px;
+    float: left;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.slide-active{
+    display: block;
+}
+.slide0{
+    background-image: url("img/bg1.jpg");
+}
+
+.slide1{
+    background-image: url("img/bg2.jpg");
+}
+
+.slide2{
+    background-image: url("img/bg3.jpg");
+}
+
+.button{
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    left: 244px;
+    top: 50%;
+    background: url("img/arrow.png") center center no-repeat;
+    margin-top: -40px;
+    transform: rotate(180deg);
+}
+
+.button:hover{
+    background-color: #333;
+    opacity: 0.7;
+    filter: alpha(opacity = 70);
+}
+.next{
+    left: auto;
+    right: 0;
+    transform: rotate(0deg);
+}
+
+.dots{
+    position: absolute;
+    right: 24px;
+    line-height: 12px;
+    bottom: 24px;
+
+}
+
+.dots span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(7,17,27,0.4);
+    margin-left: 8px;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset; /*水平 垂直 模糊距离 阴影尺寸 阴影颜色 内部*/
+}
+
+.dots span.active{
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+
+}
+
+/*菜单*/
+
+.menu-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 244px;
+    height: 460px;
+    background-color: rgba(7,17,27,0.3);
+    z-index: 1;/*层叠值*/
+}
+
+/*主菜单*/
+.menu-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 244px;
+    height: 460px;
+    z-index: 2;
+}
+
+.menu-item{
+    height: 64px;
+    line-height: 66px;
+    cursor: pointer;/*把光标变成手型*/
+    padding: 0 24px;
+}
+
+.menu-item a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    height: 63px;
+    padding: 0 15px;
+    position: relative;/*相对于i的父定位*/
+}
+
+.menu-item:last-child a{
+    border-bottom: none;
+}
+
+.menu-item i{
+    position: absolute;/*自动成为行标签*/
+    right: 32px;
+    top: 2px;
+    color: rgba(255,255,255,0.5);
+    font-style: normal;
+    font-weight: normal;
+    font-family: iconfont;
+    font-size: 30px;
+}
+
+.sub-menu{
+    width: 730px;
+    height: 458px;
+    position: absolute;
+    left: 244px;
+    top: 0;
+    background: #fff;
+    z-index: 500;
+    border: 1px solid #e9dde1;
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.inner-box{
+    width: 100%;
+    height: 100%;
+    background: url("img/fe.png") no-repeat;
+    display: none;
+}
+
+.sub-inner-box{
+    width: 652px;
+    margin-left: 40px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.title{
+    font-size: 16px;
+    color: #f01414;
+    line-height: 16px;
+    font-weight: bold;
+    margin: 28px 0 30px 0;/*上 右 下 左*/
+}
+
+.sub-row{
+    margin-bottom: 25px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.mr10{
+    margin-right: 10px;
+}
+.ml10{
+    margi-left: 10px;
+}
+
+.hide{
+    display: none;
+}
